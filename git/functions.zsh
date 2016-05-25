@@ -9,9 +9,10 @@ h_reset () {
   git push --force
 }
 
-skip () {
-  local message=${1:-ci}
-  git commit -a -m "chore(skip): $message"
+quick () {
+  local message=${1:-quick}
+  git commit -a -m "chore(app): $message"
+  git push --no-verify
 }
 
 gq () {

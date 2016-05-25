@@ -32,6 +32,7 @@
       "color-tabs"
       "color-tabs-regex"
       "trailing-spaces"
+      "linter-tslint"
     ]
     hideGitIgnoredFiles: true
     ignoredNames: [

@@ -2,6 +2,7 @@
   title: ".dotfiles"
   paths: [
     "/Users/john/.dotfiles"
+    "/Users/john/git/me/gists"
   ]
 word:
   title: "word"
