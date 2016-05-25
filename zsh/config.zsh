@@ -60,3 +60,7 @@ zle -N newtab
 # bind k and j for VI mode
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+# Bind k and j for VI mode to go through history
+# bindkey -M vicmd 'J' directory-history-search-backward
+# bindkey -M vicmd 'K' directory-history-search-forward

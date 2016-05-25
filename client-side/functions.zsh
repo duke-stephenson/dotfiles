@@ -1,3 +1,51 @@
+_warn() { echo "$@" >&2; }
+_die() { _warn "Error: $@"; kill -INT $$; }
+
+d_main () {
+  if [ $# -eq 0 ]; then
+    _die 'Path argument missing'
+  fi
+
+  module=${2:-"web"}
+  gulp dialog -m ${module} -p "views/main/${1}"
+}
+
+d_app () {
+  if [ $# -eq 0 ]; then
+    _die 'Path argument missing'
+  fi
+
+  module=${2:-"src"}
+  gulp dialog -m ${module} -p "views/app/${1}"
+}
+
+d_pub () {
+  if [ $# -eq 0 ]; then
+    _die 'Path argument missing'
+  fi
+
+  module=${2:-"web"}
+  gulp dialog -m ${module} -p "views/public/${1}"
+}
+
+c_main () {
+  if [ $# -eq 0 ]; then
+    _die 'Path argument missing'
+  fi
+
+  module=${2:-"web"}
+  gulp comp -m ${module} -p "views/main/${1}"
+}
+
+c_pub () {
+  if [ $# -eq 0 ]; then
+    _die 'Path argument missing'
+  fi
+
+  module=${2:-"web"}
+  gulp comp -m ${module} -p "views/public/${1}"
+}
+
 deb () {
     DEBUG=${1:-"*"} npm run ${2}
 }
@@ -19,7 +67,8 @@ jib () {
 
 ti () {
 	package=$1
-	tsd install $package -ros
+  t_flag=${2:-"A"}
+	typings install -$t_flag $package -S
 }
 
 unj () {
