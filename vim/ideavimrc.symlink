@@ -6,6 +6,8 @@ source ~/.vimrc
 
 " Reload .ideavimrc
 nnoremap <Space>vs :source ~/.ideavimrc<CR>
+set visualbell
+set noerrorbells
 
 
 " ============================================================================

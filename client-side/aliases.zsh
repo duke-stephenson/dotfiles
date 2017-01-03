@@ -5,7 +5,7 @@ alias admin.fast='grunt watch --module=admin --fast'
 alias followme.fast='grunt watch --module=followme --fast'
 
 alias bin='bower info'
-alias ji='jspm install'
+# alias ji='jspm install'
 alias ujb='jspm unbundle'
 alias jd='jspm depcache'
 
@@ -24,3 +24,17 @@ alias wa='grunt watch'
 alias ma='python manage.py'
 
 alias ogc='open -a Google\ Chrome --args --disable-web-security --allow-file-access-from-files'
+
+alias seed='python manage.py seed'
+alias scripts='python manage.py scripts'
+alias utils='python manage.py utils'
+alias migrate='python manage.py db migrate --message'
+alias fl='flask'
+alias cli='python cli.py'
+alias mig='python cli.py db migrate --message'
+# alias db='python cli.py db'
+
+alias pyone='py.test -v --cov-report html --cov=src/python/glyngo -m one src/tests/unit'
+alias logtail='tail -f /usr/local/Cellar/watchman/4.5.0/var/run/watchman/john-state/log'
+alias alog='tail -f /usr/local/var/log/nginx/access.log'
+alias elog='tail -f /usr/local/var/log/nginx/error.log'

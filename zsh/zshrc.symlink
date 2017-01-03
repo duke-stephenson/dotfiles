@@ -8,6 +8,7 @@ HIST_STAMPS="dd.mm.yyyy"
 ZSH_THEME=""
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/git
+export PATH=$PATH:/usr/local/google_appengine/
 
 local debug="false"
 
@@ -86,11 +87,15 @@ do
 done
 
 unset config_files
-source ~/.bashrc
 
 ### ohmy functions ###
 #add_corrects
 
 # added by travis gem
 [ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
-. ~/npm-comp.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/john/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/john/google-cloud-sdk/completion.zsh.inc'

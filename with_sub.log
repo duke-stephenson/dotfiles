@@ -1,0 +1,22 @@
+(5590) wsgi starting up on http://0.0.0.0:8070
+(5590) accepted ('127.0.0.1', 50433)
+Server initialized for eventlet.
+fe32d4dee9ad4144ad348d2e788561d9: Sending packet OPEN data {'sid': 'fe32d4dee9ad4144ad348d2e788561d9', 'upgrades': ['websocket'], 'pingInterval': 25000, 'pingTimeout': 60000}
+fe32d4dee9ad4144ad348d2e788561d9: Sending packet MESSAGE data 0
+(5590) accepted ('127.0.0.1', 50435)
+fe32d4dee9ad4144ad348d2e788561d9: Received request to upgrade to websocket
+fe32d4dee9ad4144ad348d2e788561d9: Sending packet NOOP data None
+(5590) accepted ('127.0.0.1', 50436)
+(5590) accepted ('127.0.0.1', 50437)
+fe32d4dee9ad4144ad348d2e788561d9: Received packet MESSAGE data 2["join account",{"account_id":17}]
+received event "join account" from fe32d4dee9ad4144ad348d2e788561d9 [/]
+fe32d4dee9ad4144ad348d2e788561d9 is entering room 17 [/]
+fe32d4dee9ad4144ad348d2e788561d9: Upgrade to websocket successful
+(5590) accepted ('127.0.0.1', 50440)
+emitting event "start pubsub" to 17 [/]
+fe32d4dee9ad4144ad348d2e788561d9: Sending packet MESSAGE data 2["start pubsub",{"msg":"Task Started"}]
+(5590) accepted ('127.0.0.1', 50447)
+Server initialized for eventlet.
+emitting event "finish pubsub" to 17 [/]
+fe32d4dee9ad4144ad348d2e788561d9: Received packet PING data None
+fe32d4dee9ad4144ad348d2e788561d9: Sending packet PONG data None

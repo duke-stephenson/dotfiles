@@ -48,6 +48,7 @@
     ]
     openEmptyEditorOnStart: false
     projectHome: "/Users/john/git"
+    telemetryConsent: "limited"
   "disable-keybindings": {}
   docblockr: {}
   editor:

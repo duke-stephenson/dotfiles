@@ -4,6 +4,8 @@
 """
 set gdefault
 syntax on
+set visualbell
+set noerrorbells
 
 " Wrap gitcommit file types at the appropriate length "
 filetype indent plugin on
@@ -193,7 +195,5 @@ set wrap "Wrap lines
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
-
-inoremap jj <Esc>
 
 "nnoremap <c-n> :%s///g<left><left>
