@@ -1,1 +1,0 @@
-alias we='wercker'

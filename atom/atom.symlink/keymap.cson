@@ -19,7 +19,6 @@
   'cmd-k m l': 'pane:split-right-moving-current-tab'
   'cmd-k m k':    'pane:split-up-moving-current-tab'
   'cmd-k m j':  'pane:split-down-moving-current-tab'
-  'f2': 'linter:next-error'
   'cmd-d': 'toggle-markdown-task:toggle'
   'ctrl-d': 'toggle-markdown-task:toggle'
 

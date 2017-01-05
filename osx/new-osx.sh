@@ -6,9 +6,6 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# # Disable menu bar transparency
-# defaults write -g AppleEnableMenuBarTransparency -bool false
-
 # Expand save panel by default
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
 
@@ -64,9 +61,6 @@ defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 defaults write com.apple.Mail DisableSendAnimations -bool true
 
-# Disable Resume system-wide
-# defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
-
 # Enable Dashboard dev mode (allows keeping widgets on the desktop)
 defaults write com.apple.dashboard devmode -bool true
 
@@ -84,9 +78,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Enable tap to click (Trackpad)
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
 # Reset Launchpad
 rm ~/Library/Application\ Support/Dock/*.db
