@@ -6,35 +6,6 @@ _pubs () {
  gcloud alpha pubsub subscriptions create prod-sync-google --topic prod-sync-google --ack-deadline 600 --push-endpoint https://app.socialclime.com/pubsub/v1/sync-google
 }
 
-cunt () {
-
-watchman -j <<-EOT
-["trigger", "src/tests/unit", {
-            "name": "glyngo unit tests",
-            "chdir": "../../..",
-            "append_files": false,
-            "command": [
-                "pyone"
-            ],
-            "stdin": [
-                "name",
-                "exists",
-                "new",
-                "size",
-                "mode"
-            ],
-            "expression": [
-                "anyof",
-                [
-                    "match",
-                    "*.py",
-                    "wholename"
-                ]
-            ]
-        }]
-EOT
-}
-
 _warn() { echo "$@" >&2; }
 _die() { _warn "Error: $@"; kill -INT $$; }
 
@@ -104,30 +75,31 @@ jin () {
  done
  echo "cmd $cmd"
  ji="jspm install"
- eval $ji $cmd
+ eval $ji $cmd --lock
 }
 
 jig () {
 	package=$1
-	jspm install github:$package
+	jspm install github:$package --lock
 }
 
 jib () {
 	package=$1
-	jspm install bower:$package
-}
-
-ti () {
-	package=$1
-	typings i dt~$package -GS
+	jspm install bower:$package --lock
 }
 
 unj () {
-  jspm uninstall $1
+  cmd=""
+  for name in $@; do
+   cmd+="$name "
+  done
+  echo "cmd $cmd"
+  ji="jspm uninstall"
+  eval $ji $cmd
 }
 
 jid () {
- jspm install $@ --dev
+ jspm install $@ --dev --lock
 }
 
 ty () {
@@ -151,7 +123,7 @@ uty () {
 }
 
 ji () {
- jspm install $@
+ jspm install $@ --lock
 }
 
 b_main () {

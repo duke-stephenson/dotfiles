@@ -8,7 +8,7 @@
 #   print 'no hub?!'
 # fi
 
-
+eval "$(hub alias -s)"
 ### Extra git aliases from tj holowaychuk ###
 alias gca="git commit -a -m"
 alias gcaa='git commit -a -n -m'

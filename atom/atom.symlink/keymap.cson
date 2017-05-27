@@ -1,14 +1,14 @@
-'.platform-darwin atom-text-editor.vim-mode:not(.insert-mode)':
+'.platform-darwin atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'cmd-p': 'clipboard-plus:toggle'
   'shift-cmd-V': 'clipboard-plus:toggle'
   'U': 'core:redo'
   'cmd-1': 'tree-view:toggle-focus'
-  'L': 'vim-mode:move-to-last-character-of-line'
-  'H': 'vim-mode:move-to-first-character-of-line'
+  'L': 'vim-mode-plus:move-to-last-character-of-line'
+  'H': 'vim-mode-plus:move-to-first-character-of-line'
   'cmd-shift-c': 'window:toggle-dev-tools'
   'cmd-[': 'last-cursor-position:previous'
   'cmd-]': 'last-cursor-position:next'
-
+#
 
   'cmd-k h':  'pane:split-left-creating-empty-pane'
   'cmd-k l': 'pane:split-right-creating-empty-pane'
@@ -34,7 +34,7 @@
   'shift-f2': 'typescript:go-to-previous'
 
 
-'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
+'atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode):not(.jumpy-jump-mode)':
   'f': 'jumpy:toggle'
 
 'body, .platform-darwin atom-text-editor':

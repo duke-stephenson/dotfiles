@@ -56,14 +56,13 @@
     fontSize: 15
     invisibles: {}
     preferredLineLength: 120
-    tabLength: 1
     tabType: "soft"
   esformatter: {}
   "exception-reporting":
     userId: "ba91f39e-1537-6aa8-ca06-8feb508e989c"
   "find-and-replace":
     focusEditorAfterSearch: true
-    openProjectFindResultsInRightPane: true
+    projectSearchResultsPaneSplitDirection: "right"
     scrollToResultOnLiveSearch: true
   "fuzzy-finder": {}
   "gist-it":
@@ -84,12 +83,13 @@
     fontSize: 0.85
     highContrast: true
   linter: {}
+  "linter-ui-default":
+    showPanel: true
   "local-history": {}
   "markdown-preview": {}
   minimap:
     displayMinimapOnLeft: true
-  "one-dark-ui":
-    layoutMode: "Compact"
+  "one-dark-ui": {}
   "one-light-ui": {}
   preview: {}
   "recent-files-fuzzy-finder": {}
@@ -110,6 +110,10 @@
     enableForCursorLines: true
   "vim-mode":
     useSmartcaseForSearch: true
+  "vim-mode-plus":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+    useSmartcaseForSearchCurrentWord: true
   "webbox-color":
     fillColorAsBackground: false
   welcome:

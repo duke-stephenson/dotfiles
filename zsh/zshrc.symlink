@@ -6,6 +6,7 @@ DISABLE_LS_COLORS="true"
 ENABLE_CORRECTION="true"
 HIST_STAMPS="dd.mm.yyyy"
 ZSH_THEME=""
+export PATH=$PATH:/usr/local/sbin
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/git
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
@@ -53,10 +54,12 @@ plugins=(
   web-search
   # wd
   vi-mode
+  # pyenv
   virtualenvwrapper
   zsh-syntax-highlighting
   history-substring-search
   zsh-completions
+  zsh-nvm
 )
 
 if [[ $debug ]] ; then
@@ -89,7 +92,7 @@ done
 unset config_files
 
 ### ohmy functions ###
-add_corrects
+# add_corrects
 
 # added by travis gem
 [ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
@@ -103,3 +106,6 @@ fi
 if [ -f /Users/john/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/john/google-cloud-sdk/completion.zsh.inc'
 fi
+
+#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi

@@ -9,6 +9,7 @@ alias bin='bower info'
 alias ujb='jspm unbundle'
 alias jd='jspm depcache'
 
+
 alias comp='gulp comp -p'
 alias c.main='gulp comp -p views/main/'
 alias d.main='gulp dialog -p views/main/'
@@ -38,3 +39,5 @@ alias pyone='py.test -v --cov-report html --cov=src/python/glyngo -m one src/tes
 alias logtail='tail -f /usr/local/Cellar/watchman/4.5.0/var/run/watchman/john-state/log'
 alias alog='tail -f /usr/local/var/log/nginx/access.log'
 alias elog='tail -f /usr/local/var/log/nginx/error.log'
+
+alias page='ionic g page'

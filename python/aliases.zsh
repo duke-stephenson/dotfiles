@@ -1,5 +1,17 @@
 
 
+# alias v='pyenv activate'
+# alias v.deactivate='pyenv deactivate'
+# alias v.mk='pyenv virtualenv'
+# alias v.rm='pyenv uninstall'
+# alias v.ls='pyenv virtualenvs'
+# alias v.switch='workon'
+# alias v.add2virtualenv='add2virtualenv'
+# alias v.cdsitepackages='cdsitepackages'
+# alias v.cd='cdvirtualenv'
+# alias v.lssitepackages='lssitepackages'
+# alias v.tmp='mktmpenv'
+
 alias v='workon'
 alias v.deactivate='deactivate'
 alias v.mk='mkvirtualenv'
@@ -13,5 +25,6 @@ alias v.tmp='mktmpenv'
 
 alias py.i='pyb install_dependencies'
 alias pi='pip install'
+alias upi='pip uninstall'
 
 alias manage='python manage.py'
