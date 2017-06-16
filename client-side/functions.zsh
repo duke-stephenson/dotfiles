@@ -1,11 +1,3 @@
-_pubs () {
- gcloud alpha pubsub topics create prod-cron prod-med-imports prod-score-events prod-sync-google
- gcloud alpha pubsub subscriptions create prod-cron --topic prod-cron --ack-deadline 600 --push-endpoint https://app.socialclime.com/pubsub/v1/cron
- gcloud alpha pubsub subscriptions create prod-med-imports --topic prod-med-imports --ack-deadline 600 --push-endpoint https://app.socialclime.com/pubsub/v1/med-imports
- gcloud alpha pubsub subscriptions create prod-score-events --topic prod-score-events --ack-deadline 600 --push-endpoint https://app.socialclime.com/pubsub/v1/score-events
- gcloud alpha pubsub subscriptions create prod-sync-google --topic prod-sync-google --ack-deadline 600 --push-endpoint https://app.socialclime.com/pubsub/v1/sync-google
-}
-
 _warn() { echo "$@" >&2; }
 _die() { _warn "Error: $@"; kill -INT $$; }
 
@@ -68,6 +60,22 @@ deb () {
     DEBUG=${1:-"*"} npm run ${2}
 }
 
+ji () {
+ jspm install $@ --lock
+}
+
+jro () {
+  ji="jspm resolve --only"
+  echo 'package>'
+  pkg=''
+  vared pkg
+  echo 'version>'
+  ver=''
+  vared ver
+  cmd="$pkg@$ver"
+  eval $ji $cmd
+}
+
 jin () {
  cmd=""
  for name in $@; do
@@ -76,6 +84,16 @@ jin () {
  echo "cmd $cmd"
  ji="jspm install"
  eval $ji $cmd --lock
+}
+
+jidn () {
+ cmd=""
+ for name in $@; do
+  cmd+="npm:$name "
+ done
+ echo "cmd $cmd"
+ ji="jspm install"
+ eval $ji $cmd --dev --lock
 }
 
 jig () {
@@ -102,6 +120,11 @@ jid () {
  jspm install $@ --dev --lock
 }
 
+jiid () {
+ jspm install $@ --dev
+}
+
+
 ty () {
  libs=()
  for var in "$@"; do
@@ -117,13 +140,7 @@ uty () {
  for var in "$@"; do
   libs+="@types/${var}"
  done
- # cm="npm install --save ${libs}"
- # echo ${cm}
  npm uninstall --save ${libs}
-}
-
-ji () {
- jspm install $@ --lock
 }
 
 b_main () {

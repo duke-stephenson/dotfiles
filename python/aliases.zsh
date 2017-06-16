@@ -25,6 +25,6 @@ alias v.tmp='mktmpenv'
 
 alias py.i='pyb install_dependencies'
 alias pi='pip install'
-alias upi='pip uninstall'
+alias piu='pip uninstall'
 
 alias manage='python manage.py'
