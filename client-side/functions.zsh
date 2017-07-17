@@ -1,79 +1,9 @@
-_warn() { echo "$@" >&2; }
-_die() { _warn "Error: $@"; kill -INT $$; }
-
-
-d_main () {
-  if [ $# -eq 0 ]; then
-    _die 'Path argument missing'
-  fi
-
-  module=${2:-"web"}
-  gulp dialog -m ${module} -p "views/main/${1}"
-}
-
-d_app () {
-  if [ $# -eq 0 ]; then
-    _die 'Path argument missing'
-  fi
-
-  module=${2:-"app"}
-  gulp dialog -m ${module} -p "views/app/${1}"
-}
-
-d_pub () {
-  if [ $# -eq 0 ]; then
-    _die 'Path argument missing'
-  fi
-
-  module=${2:-"web"}
-  gulp dialog -m ${module} -p "views/public/${1}"
-}
-
-c_main () {
-  if [ $# -eq 0 ]; then
-    _die 'Path argument missing'
-  fi
-
-  module=${2:-"web"}
-  gulp comp -m ${module} -p "views/main/${1}"
-}
-
-c_pub () {
-  if [ $# -eq 0 ]; then
-    _die 'Path argument missing'
-  fi
-
-  module=${2:-"web"}
-  gulp comp -m ${module} -p "views/public/${1}"
-}
-
-c_app () {
- if [ $# -eq 0 ]; then
-   _die 'Path argument missing'
- fi
-
- module=${2:-"app"}
- gulp comp -m ${module} -p "views/app/${1}"
-}
-
-deb () {
-    DEBUG=${1:-"*"} npm run ${2}
+jbu () {
+ eval "jspm bundle $@ -i --skip-source-maps static/dist/jbu.js"
 }
 
 ji () {
  jspm install $@ --lock
-}
-
-jro () {
-  ji="jspm resolve --only"
-  echo 'package>'
-  pkg=''
-  vared pkg
-  echo 'version>'
-  ver=''
-  vared ver
-  cmd="$pkg@$ver"
-  eval $ji $cmd
 }
 
 jin () {
@@ -101,9 +31,13 @@ jig () {
 	jspm install github:$package --lock
 }
 
-jib () {
-	package=$1
-	jspm install bower:$package --lock
+
+jid () {
+  jspm install $@ --dev --lock
+}
+
+jiid () {
+ jspm install $@ --dev
 }
 
 unj () {
@@ -115,15 +49,6 @@ unj () {
   ji="jspm uninstall"
   eval $ji $cmd
 }
-
-jid () {
- jspm install $@ --dev --lock
-}
-
-jiid () {
- jspm install $@ --dev
-}
-
 
 ty () {
  libs=()
@@ -141,39 +66,4 @@ uty () {
   libs+="@types/${var}"
  done
  npm uninstall --save ${libs}
-}
-
-b_main () {
- if [ $# -eq 0 ]; then
-   _die 'Path argument missing'
- fi
- module=${1}
- jspm bundle web - web/components/views/main/${module} -i --skip-source-maps src/static/dist/temp/bundle.js
-}
-
-
-reset_web () {
-	rm -rf ~/Library/Application\ Support/WebStorm*
-	rm -rf ~/Library/Logs/WebStorm*
-	rm -rf ~/Library/Caches/WebStorm*
-	rm -rf ~/Library/Preferences/WebStorm*
-}
-
-to_stylus () {
-	for file in "$@" ; do
-		echo $file
-		sass2stylus $file .
-	done
-}
-
-do_it () {
-	for file in "$@" ; do
-		{
-			sass2stylus $file "$2" 2>/dev/null
-			echo $file
-		} always {
-			echo "FAILED: $file"
-		}
-
-	done
 }

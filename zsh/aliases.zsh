@@ -18,11 +18,14 @@ alias lrt='ls -1Fcrt'
 
 alias grep='grep --color'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+alias hgrep="fc -El 0 | grep" # grep over terminal history
+alias -g gre='| grep -i' # grep over stdout `pip search flask-sessionstore gre sessionstore`
+
+alias soc="source ~/.zshrc"
 
 alias t='tail -f'
-alias hgrep="fc -El 0 | grep"
 alias help='man'
-alias p='ps -f'
+alias p='ps -ef'
 
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
