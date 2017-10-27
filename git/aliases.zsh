@@ -1,14 +1,14 @@
 # Use `hub` as our git wrapper:
 #   http://defunkt.github.com/hub/
-# hub_path=$(which hub)
-# if (( $+commands[hub] ))
-# then
-#   alias git=$hub_path
-# else
-#   print 'no hub?!'
-# fi
+hub_path=$(which hub)
+if (( $+commands[hub] ))
+then
+  alias git=$hub_path
+else
+  print 'no hub?!'
+fi
 
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 ### Extra git aliases from tj holowaychuk ###
 alias gca="git commit -a -m"
 alias gcaa='git commit -a -n -m'
@@ -21,11 +21,12 @@ alias gbda='git branch --no-color --merged | grep -vE "^(\*|\s*master\s*$|\s*dev
 
 ### my git aliases ###
 alias gun='git checkout -- .' # remove unstaged changes
-alias g.s='git browse'
+alias g.s='gh browse'
 alias gpr='git pull-request -b develop'
 alias groot='cd $(git rev-parse --show-cdup)'
 alias gcd='git checkout develop'
 alias gmd='git merge develop'
+alias gmd='git merge master'
 alias root='cd $(git rev-parse --git-dir)/..'
 alias greset='git reset --hard HEAD~1'
 alias del-b='git delete-branch'

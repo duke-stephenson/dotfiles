@@ -37,16 +37,16 @@ done
 # Start plugins
 # ============================================================================
 plugins=(
-  adb
+  # adb
   brew
   # encode64
-  fasd
+  # fasd
   # httpie
   history
   git
   github
   git-hubflow
-  pip
+  # pip
   python
   # pylint
   zsh_reload
@@ -90,11 +90,11 @@ done
 
 unset config_files
 
-### ohmy functions ###
+## ohmy functions ###
 # add_corrects
 
 # added by travis gem
-[ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
+# [ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/john/google-cloud-sdk/path.zsh.inc ]; then
@@ -108,6 +108,5 @@ fi
 
 #if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 #if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export WSDEV=0
-    
+# export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export WSDEV=1

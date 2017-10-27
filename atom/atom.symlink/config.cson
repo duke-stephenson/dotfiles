@@ -53,7 +53,7 @@
   docblockr: {}
   editor:
     fontFamily: "Menlo"
-    fontSize: 15
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 120
     tabType: "soft"
@@ -84,7 +84,6 @@
     highContrast: true
   linter: {}
   "linter-ui-default":
-    panelHeight: 69
     showPanel: true
   "local-history": {}
   "markdown-preview": {}
@@ -112,6 +111,7 @@
   "vim-mode":
     useSmartcaseForSearch: true
   "vim-mode-plus":
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
     useSmartcaseForSearchCurrentWord: true

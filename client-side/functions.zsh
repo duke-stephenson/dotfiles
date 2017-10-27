@@ -2,6 +2,14 @@ jbu () {
  eval "jspm bundle $@ -i --skip-source-maps static/dist/jbu.js"
 }
 
+sjbu () {
+ eval "jspm bundle support - support/vendors - support/components/$@ -i --skip-source-maps static/dist/sjbu.js"
+}
+
+wjbu () {
+ eval "jspm bundle web - web/vendors - web/views/$@ -i --skip-source-maps static/dist/wjbu.js"
+}
+
 ji () {
  jspm install $@ --lock
 }

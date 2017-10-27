@@ -1,5 +1,5 @@
 
-export PATH="/Users/john/Library/Android/sdk/platform-tools:$PATH"
+# export PATH="/Users/john/Library/Android/sdk/platform-tools:$PATH"
 
 
 export goose="06f33c43"
