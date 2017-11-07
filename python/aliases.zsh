@@ -10,4 +10,4 @@ alias v.lssitepackages='lssitepackages'
 alias v.tmp='mktmpenv'
 
 alias devel='python setup.py develop'
-alias unpe="pip uninstall $(basename $(find . -name '*.egg-info') .egg-info)"
+# alias unpe="pip uninstall $(basename $(find . -name '*.egg-info') .egg-info)"

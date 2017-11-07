@@ -49,7 +49,8 @@ setopt AUTO_CD
 setopt MULTIOS
 setopt AUTO_NAME_DIRS
 setopt PUSHD_TO_HOME
-setopt RM_STAR_WAIT
+setopt rm_star_silent
+unsetopt rm_star_wait
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first

@@ -105,8 +105,3 @@ fi
 if [ -f /Users/john/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/john/google-cloud-sdk/completion.zsh.inc'
 fi
-
-#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-# export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export WSDEV=1
