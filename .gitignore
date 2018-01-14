@@ -7,4 +7,3 @@ atom/atom.symlink/
 !atom/atom.symlink/*.cson
 !atom/atom.symlink/*.less
 git/gitconfig.symlink
-notes/
