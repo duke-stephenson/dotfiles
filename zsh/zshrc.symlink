@@ -105,3 +105,4 @@ fi
 if [ -f /Users/john/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/john/google-cloud-sdk/completion.zsh.inc'
 fi
+export FLASK_APP="/Users/john/git/apps/socialclime/man.py"

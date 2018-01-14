@@ -11,3 +11,8 @@ alias v.tmp='mktmpenv'
 
 alias devel='python setup.py develop'
 # alias unpe="pip uninstall $(basename $(find . -name '*.egg-info') .egg-info)"
+
+alias pe="pipenv"
+alias pi="pipenv install"
+alias pii="pipenv install --ignore-pipfile"
+alias pid="pipenv install --dev"
