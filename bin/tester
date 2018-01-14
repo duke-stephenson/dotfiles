@@ -1,0 +1,9 @@
+
+!/usr/bin/env bash
+sudo -v
+set -ev
+
+mkdir /usr/local/Tester
+chown john:admin /usr/local/Tester
+chmod ug+rwx /usr/local/Tester
+chmod o+rx /usr/local/Tester
