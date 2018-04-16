@@ -3,5 +3,8 @@
 
 pip install --upgrade pip setuptools
 pip install -r ~/.virtualenvs/py-deps.txt
-nodeenv -p
-npm install -g npm
+nodeenv -p --node=6.12.3
+
+# Fix broken updated python
+# IMPORTANT: Must activate broken venv first
+# sh <(curl -sL https://gist.github.com/ttimasdf/34bc85ac008f68b2ee098850cab2979c/raw/56143d3301322136714e429079c164664f603945/fix_virtualenv)

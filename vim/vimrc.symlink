@@ -11,7 +11,7 @@ set noerrorbells
 filetype indent plugin on
 "set timeoutlen=200
 
-set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
+"set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set clipboard=unnamedplus
 set number
 
@@ -104,10 +104,10 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " Ignore case when searching
-set ignorecase
+" set ignorecase
 
-" When searching try to be smart about cases 
-set smartcase
+" When searching try to be smart about cases
+" set smartcase
 
 " Highlight search results
 set hlsearch

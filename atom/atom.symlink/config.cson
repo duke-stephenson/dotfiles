@@ -111,7 +111,6 @@
   "vim-mode":
     useSmartcaseForSearch: true
   "vim-mode-plus":
-    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
     useSmartcaseForSearchCurrentWord: true

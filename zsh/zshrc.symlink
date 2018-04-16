@@ -58,7 +58,7 @@ plugins=(
   virtualenvwrapper
   zsh-syntax-highlighting
   history-substring-search
-  zsh-completions
+  # zsh-completions
 )
 
 if [[ $debug ]] ; then
@@ -106,3 +106,4 @@ if [ -f /Users/john/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/john/google-cloud-sdk/completion.zsh.inc'
 fi
 export FLASK_APP="/Users/john/git/apps/socialclime/man.py"
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh

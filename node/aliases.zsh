@@ -13,6 +13,18 @@ alias ngr='PATH=$(npm bin):$PATH'
 alias nr='npm run -s'
 
 alias ya="yarn add"
+alias yad="yarn add -D"
 alias yag="yarn global add"
 alias yu="yarn upgrade"
 alias yr="yarn remove"
+alias ylg="yarn global list --depth=0"
+
+
+yat () {
+
+ cmd=""
+ for name in $@; do
+  cmd+="@types/$name "
+ done
+ eval yarn add -D $cmd
+}
