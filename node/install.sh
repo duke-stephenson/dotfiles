@@ -1,3 +1,5 @@
-#!/bin/sh
-[ "$(uname -s)" != "Darwin" ] && exit 0
-brew install node yarn
+#!/usr/bin/env bash
+
+if ! hash node 2>/dev/null; then
+  brew install node yarn
+fi

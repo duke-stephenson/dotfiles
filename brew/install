@@ -61,8 +61,17 @@ brew install less
 brew install openssh
 brew install python
 brew install rsync
-brew install svn
 brew install unzip
 brew install vim --with-override-system-vi
+
+# Custom
+brew install zsh-completions
+brew cask install atom
+brew cask install dashlane
+brew cask install google-chrome
+brew cask install tower
+brew cask install slack
+brew cask install bettertouchtool
+brew cask install pycharm
 
 exit 0

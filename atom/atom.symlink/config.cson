@@ -25,8 +25,7 @@
   "color-tabs-regex":
     breakAfterFirstMatch: true
   core:
-    audioBeep: false
-    destroyEmptyPanes: false
+    closeDeletedFileTabs: true
     disabledPackages: [
       "language-javascript-better"
       "color-tabs"

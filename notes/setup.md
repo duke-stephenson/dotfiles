@@ -1,6 +1,7 @@
+# http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/#keychainhelper
+# http://olivierlacan.com/posts/why-is-git-https-not-working-on-github/
 
-Add cask to br-clean
-brew pin python python3
-brew install cask
-First cask install needed password, how to get around that
-brew cask install visual-studio-code
+# Manually remap capslock in keyboard prefs
+# Read a correct shell setup
+# Set ignored paths for timemachine
+# Setup hubflow
