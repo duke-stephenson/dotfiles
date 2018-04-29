@@ -47,6 +47,7 @@ setup_gitconfig () {
 
     success 'gitconfig'
   fi
+  git config --global credential.helper osxkeychain
 }
 
 

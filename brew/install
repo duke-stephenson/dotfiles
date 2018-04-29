@@ -65,7 +65,9 @@ brew install unzip
 brew install vim --with-override-system-vi
 
 # Custom
-brew install zsh-completions
+# brew install zsh-completions
+brew install hub
+brew install git-extras
 brew cask install atom
 brew cask install dashlane
 brew cask install google-chrome
