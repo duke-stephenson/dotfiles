@@ -4,7 +4,5 @@
 # completion='$(brew --prefix)/share/zsh/site-functions/_git'
 #
 
-completion="$ZSH/plugins/git-extras/git-extras.plugin.zsh"
-if test -f $completion; then
-  source $completion
-fi
+
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh

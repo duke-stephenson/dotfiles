@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -d "~/mac/themes" ]; then
+if [ -d "$HOME/mac/themes" ]; then
   echo "Already have solarized-dark"
 else
   echo "Downloading solarized-dark terminal"

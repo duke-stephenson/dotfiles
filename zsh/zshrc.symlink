@@ -6,18 +6,15 @@ DISABLE_LS_COLORS="true"
 ENABLE_CORRECTION="true"
 HIST_STAMPS="dd.mm.yyyy"
 ZSH_THEME=""
-export PATH=$PATH:/usr/local/sbin
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/git
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 
 local debug="false"
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
-if [[ -a ~/.localrc ]]
-then
+if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 fi
 
@@ -28,14 +25,10 @@ typeset -U config_files
 config_files=($D/^(oh-my-zsh|ohmy-custom)*/**/*.zsh)
 
 # load the path files
-for file in ${(M)config_files:#*/path.zsh}
-do
+for file in ${(M)config_files:#*/path.zsh}; do
   source $file
 done
 
-# ============================================================================
-# Start plugins
-# ============================================================================
 plugins=(
   # adb
   brew
@@ -61,19 +54,8 @@ plugins=(
   # zsh-completions
 )
 
-if [[ $debug ]] ; then
-  source $ZSH/oh-my-zsh.sh
-fi
-
-unset debug
-
-# ============================================================================
-# End plugins
-# ============================================================================
-
 # load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
   source $file
 done
 
@@ -81,10 +63,8 @@ done
 autoload -U compinit
 compinit
 
-
 # load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
-do
+for file in ${(M)config_files:#*/completion.zsh}; do
   source $file
 done
 
@@ -95,11 +75,7 @@ unset config_files
 
 # added by travis gem
 # [ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
+
 export FLASK_APP="/Users/john/git/apps/socialclime/man.py"
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/john/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/john/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/john/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/john/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$D/bin:$PATH"
+export PATH=$PATH:/usr/local/sbin
