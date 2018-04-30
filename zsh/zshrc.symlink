@@ -1,3 +1,6 @@
+# Needed for loading config_files
+setopt extendedglob
+
 # shortcut to this dotfiles path is $D
 export D=$HOME/.dotfiles
 export ZSH=$D/oh-my-zsh
@@ -14,7 +17,8 @@ local debug="false"
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
-if [[ -a ~/.localrc ]]; then
+if [[ -a ~/.localrc ]]
+then
   source ~/.localrc
 fi
 
@@ -25,10 +29,14 @@ typeset -U config_files
 config_files=($D/^(oh-my-zsh|ohmy-custom)*/**/*.zsh)
 
 # load the path files
-for file in ${(M)config_files:#*/path.zsh}; do
+for file in ${(M)config_files:#*/path.zsh}
+do
   source $file
 done
 
+# ============================================================================
+# Start plugins
+# ============================================================================
 plugins=(
   # adb
   brew
@@ -53,6 +61,17 @@ plugins=(
   history-substring-search
   # zsh-completions
 )
+
+if [[ $debug ]] ; then
+  # Don't let debug fool you, this runs
+  source $ZSH/oh-my-zsh.sh
+fi
+
+unset debug
+
+# ============================================================================
+# End plugins
+# ============================================================================
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do

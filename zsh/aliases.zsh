@@ -21,7 +21,7 @@ alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 alias hgrep="fc -El 0 | grep" # grep over terminal history
 alias -g gre='| grep -i' # grep over stdout `pip search flask-sessionstore gre sessionstore`
 
-alias soc="source ~/.zshrc"
+# alias soc="source ~/.zshrc"
 
 alias t='tail -f'
 alias help='man'
