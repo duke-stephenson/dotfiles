@@ -1,14 +1,8 @@
-# Use `hub` as our git wrapper:
-#   http://defunkt.github.com/hub/
-hub_path=$(which hub)
-if (( $+commands[hub] )); then
-  eval "$(hub alias -s)"
-  # alias git=$hub_path
-else
-  print 'no hub?!'
-fi
+# Make hub work https://hub.github.com/
+# Used instead of github plugin which does eval
+# https://www.google.com/search?q=hub+fork+is+broken+with+git-extras&oq=hub+fork+is+broken+with+git-extras&aqs=chrome..69i57.5702j1j7&sourceid=chrome&ie=UTF-8
+alias git=hub
 
-# eval "$(hub alias -s)"
 ### Extra git aliases from tj holowaychuk ###
 alias gca="git commit -a -m"
 alias gcaa='git commit -a -n -m'
@@ -26,9 +20,9 @@ alias gpr='git pull-request -b develop'
 alias groot='cd $(git rev-parse --show-cdup)'
 alias gcd='git checkout develop'
 alias gmd='git merge develop'
-alias gmd='git merge master'
+alias gmm='git merge master'
+alias gma='git merge --abort'
 alias root='cd $(git rev-parse --git-dir)/..'
-alias greset='git reset --hard HEAD~1'
 alias del-b='git delete-branch'
 alias del-t='git delete-tag'
 alias a.what='alias | grep '

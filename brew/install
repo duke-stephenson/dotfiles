@@ -56,7 +56,7 @@ brew install nano
 
 # Other commands (non-GNU)
 brew install file-formula
-brew install git
+brew install git --without-completions
 brew install less
 brew install openssh
 brew install python
@@ -68,7 +68,6 @@ brew install vim --with-override-system-vi
 # brew install zsh-completions
 brew install hub
 brew install git-extras
-brew cask install atom
 brew cask install dashlane
 brew cask install google-chrome
 brew cask install tower

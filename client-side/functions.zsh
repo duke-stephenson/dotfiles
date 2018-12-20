@@ -1,9 +1,24 @@
+
+nis () {
+  cmd="node --inspect-brk ./node_modules/.bin/$@"
+  eval $cmd
+}
+
+unit() {
+  cmd="pytest $@"
+  echo $cmd
+  eval $cmd
+  cmd="fswatch -r -o -e 'pyc' sc tests | fswa pytest -p no:logging $@"
+  eval $cmd
+}
+
+
 jbu () {
  eval "jspm bundle $@ -i --skip-source-maps static/dist/jbu.js"
 }
 
 sjbu () {
- eval "jspm bundle support - support/vendors - support/components/$@ -i --skip-source-maps static/dist/sjbu.js"
+ eval "jspm bundle support - support/vendors - support/views/$@ -i --skip-source-maps static/dist/sjbu.js"
 }
 
 wjbu () {
@@ -11,7 +26,19 @@ wjbu () {
 }
 
 ji () {
- jspm install $@ --lock
+  cmd="jspm install $@ --lock --exact"
+  echo $cmd
+  eval $cmd
+}
+
+jie () {
+  cmd="jspm install $@ --exact"
+  echo $cmd
+  eval $cmd
+}
+
+jpp () {
+  jspm inspect $@
 }
 
 jin () {
@@ -21,7 +48,7 @@ jin () {
  done
  echo "cmd $cmd"
  ji="jspm install"
- eval $ji $cmd --lock
+ eval $ji $cmd --lock --exact
 }
 
 jidn () {
@@ -31,21 +58,17 @@ jidn () {
  done
  echo "cmd $cmd"
  ji="jspm install"
- eval $ji $cmd --dev --lock
+ eval $ji $cmd --dev --lock --exact
 }
 
 jig () {
 	package=$1
-	jspm install github:$package --lock
+	jspm install github:$package --lock --exact
 }
 
 
 jid () {
-  jspm install $@ --dev --lock
-}
-
-jiid () {
- jspm install $@ --dev
+  jspm install $@ --dev --lock --exact
 }
 
 unj () {

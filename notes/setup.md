@@ -3,6 +3,7 @@ http://burnedpixel.com/blog/beginners-setup-guide-for-ruby-node-git-github-on-yo
 http://olivierlacan.com/posts/why-is-git-https-not-working-on-github/
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 https://stackoverflow.com/questions/47455300/ssh-config-bad-configuration-option-usekeychain-on-mac-os-sierra-10-12-6
+https://github.com/github/hub/issues/1596
 
 # Very start
 `xcode-select --install`

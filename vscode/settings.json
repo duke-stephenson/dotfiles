@@ -1,0 +1,6 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDelete": false,
+    "files.autoSave": "afterDelay",
+    "editor.tabSize": 2
+}

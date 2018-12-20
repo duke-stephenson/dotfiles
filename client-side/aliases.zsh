@@ -6,12 +6,18 @@ alias ogc='open -a Google\ Chrome --args --disable-web-security --allow-file-acc
 alias alog='tail -f /usr/local/var/log/nginx/access.log'
 alias elog='tail -f /usr/local/var/log/nginx/error.log'
 
-alias sc.sup="webstarts -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8001 main_support:app"
-alias sc.inv="webstarts -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8002 main_invite:app"
-alias sc.api="webstarts -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8003 main_api:app"
-alias sc.cel="celery worker -A main_celery:app"
-alias sc.cron="celery beat -A main_cron:app --schedule instance/local/beat.db --loglevel=debug"
-alias sc.web="webstarts -c gunicorn.conf.py --graceful-timeout 0 main_web:app"
-alias sc.flower="flower -A main_celery:app --port=5555"
-alias sc.ac="watchmedo auto-restart -d socialclime -d instance/local -R -- celery worker -A main_celery:app"
-alias ra.ac="watchmedo auto-restart -d medrank -d instance/local -R -- celery worker -A main_celery:app"
+alias sc.web="gunicorn -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8000 --reload main_web:app"
+alias sc.pweb="gunicorn -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8000 --reload main_prof_web:app"
+alias sc.sup="gunicorn -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8001 --reload main_support:app"
+alias sc.inv="gunicorn -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8002 --reload main_invite:app"
+alias sc.api="gunicorn -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8003 --reload main_api:app"
+alias sc.sf="gunicorn -c gunicorn.conf.py --graceful-timeout 0 -b localhost:8004 --reload main_sf:app"
+
+alias sc.cro="celery beat -A main_cron:app --schedule instance/local/beat.db --loglevel=debug"
+alias sc.flo="flower -A main_celery:app --port=5555"
+alias sc.cel="celery worker -A main_celery:app -Q default,high"
+alias sc.cel1="celery worker -A main_celery:app -n w1 -Q default"
+alias sc.cel2="celery worker -A main_celery:app -n w2 -Q high"
+
+alias sc.ac="watchmedo auto-restart -d sc -d instance/local -R -- celery worker -A main_celery:app -Q celery,default,high"
+alias ra.ac="watchmedo auto-restart -d rank -d instance/local -R -- celery worker -A main_celery:app"

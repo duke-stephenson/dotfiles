@@ -1,2 +1,1 @@
-export PATH=$PATH:~/google-cloud-sdk/bin
-export GOOGLE_CLOUD_PROJECT="newdium-1283"
+if [ -f '/Users/john/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/john/google-cloud-sdk/path.zsh.inc'; fi

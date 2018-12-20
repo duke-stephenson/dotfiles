@@ -1,7 +1,4 @@
-alias zshrc='vim ~/.zshrc' # Quick access to the ~/.zshrc file
-alias zshconfig="vim ~/.zshrc"
-alias mydots="atom $D"
-alias engine="atom /usr/local/etc/nginx/nginx.conf"
+alias engine="code /usr/local/etc/nginx/"
 alias launch="vim /etc/launchd.conf"
 
 # ls, the common ones I use a lot shortened for rapid fire usage
@@ -21,7 +18,6 @@ alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 alias hgrep="fc -El 0 | grep" # grep over terminal history
 alias -g gre='| grep -i' # grep over stdout `pip search flask-sessionstore gre sessionstore`
 
-# alias soc="source ~/.zshrc"
 
 alias t='tail -f'
 alias help='man'
