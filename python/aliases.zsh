@@ -14,5 +14,8 @@ alias devel='python setup.py develop'
 
 alias pe="pipenv"
 alias pi="pipenv install"
-alias pii="pipenv install --ignore-pipfile"
 alias pid="pipenv install --dev"
+alias upi="pipenv uninstall"
+alias pipi="pip install"
+alias upipi="pip uninstall"
+
