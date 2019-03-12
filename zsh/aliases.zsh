@@ -1,5 +1,4 @@
-alias engine="code /usr/local/etc/nginx/"
-alias launch="vim /etc/launchd.conf"
+alias engine="charm /usr/local/etc/nginx/"
 
 # ls, the common ones I use a lot shortened for rapid fire usage
 # alias l='ls -lFh'     #size,show type,human readable

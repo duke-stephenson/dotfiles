@@ -7,10 +7,7 @@
 export D=$HOME/.dotfiles
 
 # Set OS X defaults
-# $D/osx/new-osx.sh
-
-# Upgrade homebrew
-brew update
+$D/osx/new-osx.sh
 
 # Install homebrew packages
 $D/brew/install 2>&1
