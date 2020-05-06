@@ -18,8 +18,6 @@
 - `script/install`
 - When git push fails, add personal access token as password.
 - When using hub you will need to enter git creds again.
-- `sudo mkdir /code`
-- `sudo chown john:staff /code`
 - Manually remap capslock in keyboard prefs
 - Set solarized as default in terminal prefs
 - Grab .localrc, vmoptions, develop_settings.py, nginx/ file from backup

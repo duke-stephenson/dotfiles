@@ -8,9 +8,23 @@ unit() {
   cmd="pytest $@"
   echo $cmd
   eval $cmd
-  cmd="watchmedo auto-restart -d sc -d tests -R -- pytest -p no:logging $@"
+  cmd='watchmedo auto-restart -d sc -d tests -p "*.py" -R -- pytest -p no:logging $@'
   eval $cmd
 }
+
+uni() {
+  cmd="pytest $@"
+  echo $cmd
+  eval $cmd
+  cmd='watchmedo auto-restart -d sc -d tests -p "*.py" -R -- pytest $@'
+  eval $cmd
+}
+
+wp-email() {
+  cmd='npx wp --config.$@ webpacks/emails.ts'
+  eval $cmd
+}
+
 
 ty () {
  libs=()

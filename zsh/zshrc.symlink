@@ -6,7 +6,6 @@ export D=$HOME/.dotfiles
 export ZSH=$D/oh-my-zsh
 ZSH_CUSTOM=~/.dotfiles/ohmy-custom
 DISABLE_LS_COLORS="true"
-ENABLE_CORRECTION="true"
 HIST_STAMPS="dd.mm.yyyy"
 ZSH_THEME=""
 # your project folder that we can `c [tab]` to
@@ -89,12 +88,14 @@ done
 
 unset config_files
 
-## ohmy functions ###
-# add_corrects
-
 # added by travis gem
 # [ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$D/bin:$PATH"
 export PATH=$PATH:/usr/local/sbin
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export GEVENT_SUPPORT=True
+export PIP_UPGRADE_STRATEGY=only-if-needed
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"

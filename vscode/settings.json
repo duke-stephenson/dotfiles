@@ -3,5 +3,6 @@
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "kite.showWelcomeNotificationOnStartup": false
 }

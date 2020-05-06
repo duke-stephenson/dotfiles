@@ -28,6 +28,12 @@ chore () {
  git commit -a -m "chore($1): $2"
 }
 
+refa () {
+ git add .
+ git commit -a -m "refactor($1): $2"
+}
+
+
 h_reset () {
   git checkout master
   git delete-tag $1
@@ -44,6 +50,12 @@ quick () {
   git push --no-verify
 }
 
+quik () {
+  git add .
+  git commit -a -m "chore($1): $2"
+  git push --no-verify
+}
+
 qup () {
  local message=${1:-quick}
  git commit -a -m "chore(app): $message"
@@ -55,4 +67,10 @@ gq () {
   local message=${1:-quick}
   git commit -a -m "chore(rel): $message" -q
   git push --no-verify
+}
+
+pull_all () {
+  for i in $(git branch -a |grep 'remotes' | awk -F origin/ '{print $2}' | grep -v 'HEAD ->');
+    do git checkout -b $i --track origin/$i;
+  done
 }

@@ -19,9 +19,11 @@ set noerrorbells
 "nnoremap N :action FindPrevious<CR>
 "nnoremap U :action $Redo<CR>
 "nnoremap f :action AceJumpAction<CR>
-
-nnoremap <leader>k :action VimWindowSplitVertical<CR>
+"nnoremap <leader>k :action VimWindowSplitVertical<CR>
+"
+nnoremap <leader>k :action SplitVertically<CR>
 nnoremap * *<c-o>
 
 nnoremap <a-r> :%s//
 
+set ideajoinset clipboard+=ideaput

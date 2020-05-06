@@ -26,6 +26,8 @@ alias root='cd $(git rev-parse --git-dir)/..'
 alias del-b='git delete-branch'
 alias del-t='git delete-tag'
 alias a.what='alias | grep '
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
 
 ### oss aliases
 alias gpo='git push j-walker23'

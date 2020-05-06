@@ -1,5 +1,3 @@
-export GOPATH="$PROJECTS/Go"
-export PATH="$GOPATH/bin:$PATH"
-
-[ ! -d "$GOPATH" ] &&  mkdir -p "$GOPATH"
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
